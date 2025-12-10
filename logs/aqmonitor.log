@@ -1,0 +1,23 @@
+2025-12-10 23:37:15,817 [ERROR] aqmonitor - API-мен байланыс кезінде қате орын алды!
+Traceback (most recent call last):
+  File "/Users/balbope/Documents/air-quality-monitor/aqmonitor/api_client.py", line 31, in get_by_coords
+    response.raise_for_status()
+  File "/opt/anaconda3/lib/python3.12/site-packages/requests/models.py", line 1024, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 401 Client Error: Unauthorized for url: https://api.openweathermap.org/data/2.5/air_pollution?lat=51.1694&lon=71.4491&appid=YOUR_API_KEY_HERE
+2025-12-11 02:32:18,608 [ERROR] aqmonitor - API-мен байланыс кезінде қате орын алды!
+Traceback (most recent call last):
+  File "/Users/balbope/Documents/air-quality-monitor/aqmonitor/api_client.py", line 31, in get_by_coords
+    response.raise_for_status()
+  File "/opt/anaconda3/lib/python3.12/site-packages/requests/models.py", line 1024, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 401 Client Error: Unauthorized for url: https://api.openweathermap.org/data/2.5/air_pollution?lat=51.1694&lon=71.4491&appid=785965571a1bcac8ca88115b26db1008
+2025-12-11 02:32:30,243 [ERROR] aqmonitor - API-мен байланыс кезінде қате орын алды!
+Traceback (most recent call last):
+  File "/Users/balbope/Documents/air-quality-monitor/aqmonitor/api_client.py", line 31, in get_by_coords
+    response.raise_for_status()
+  File "/opt/anaconda3/lib/python3.12/site-packages/requests/models.py", line 1024, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 401 Client Error: Unauthorized for url: https://api.openweathermap.org/data/2.5/air_pollution?lat=51.1694&lon=71.4491&appid=785965571a1bcac8ca88115b26db1008
+2025-12-11 03:06:10,671 [INFO] aqmonitor - API арқылы ауа сапасы деректері сәтті алынды.
+2025-12-11 03:35:19,128 [INFO] aqmonitor - API арқылы ауа сапасы деректері сәтті алынды.
