@@ -21,3 +21,7 @@ Traceback (most recent call last):
 requests.exceptions.HTTPError: 401 Client Error: Unauthorized for url: https://api.openweathermap.org/data/2.5/air_pollution?lat=51.1694&lon=71.4491&appid=785965571a1bcac8ca88115b26db1008
 2025-12-11 03:06:10,671 [INFO] aqmonitor - API арқылы ауа сапасы деректері сәтті алынды.
 2025-12-11 03:35:19,128 [INFO] aqmonitor - API арқылы ауа сапасы деректері сәтті алынды.
+2025-12-11 11:25:29,212 [INFO] aqmonitor - API арқылы ауа сапасы деректері сәтті алынды.
+2025-12-11 11:25:29,212 | INFO | aqmonitor | API арқылы ауа сапасы деректері сәтті алынды.
+2025-12-11 11:25:29,215 [INFO] aqmonitor - AQI классификация: aqi=2
+2025-12-11 11:25:29,215 | INFO | aqmonitor | AQI классификация: aqi=2

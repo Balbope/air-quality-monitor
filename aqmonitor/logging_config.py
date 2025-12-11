@@ -28,3 +28,22 @@ file_handler.setFormatter(formatter)
 # Егер бұрын қосылмаған болса, хэндлерді қосамыз
 if not logger.handlers:
     logger.addHandler(file_handler)
+
+import logging
+import os
+
+LOG_DIR = "logs"
+LOG_FILE = "aqmonitor.log"
+
+os.makedirs(LOG_DIR, exist_ok=True)
+
+logging.basicConfig(
+    level=logging.INFO,
+    format="%(asctime)s | %(levelname)s | %(name)s | %(message)s",
+    handlers=[
+        logging.FileHandler(os.path.join(LOG_DIR, LOG_FILE)),
+        logging.StreamHandler()
+    ]
+)
+
+logger = logging.getLogger("aqmonitor")

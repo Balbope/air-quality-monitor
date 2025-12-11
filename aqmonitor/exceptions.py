@@ -13,3 +13,9 @@ class AirQualityApiError(AirQualityError):
     #Сыртқы ауа сапасы API-мен жұмыс істеу кезінде туындайтын қателер.
     
     pass
+
+class ApiError(Exception):
+    pass
+
+class ParserError(Exception):
+    pass

@@ -83,3 +83,9 @@ def check_condition(result: AirQualityResult, expr: str) -> bool:
 
     tree = parse_condition(expr)
     return eval_node(tree)
+
+from .logging_config import logger
+
+def classify_aqi(aqi: int) -> str:
+    logger.info(f"AQI классификация: aqi={aqi}")
+    ...

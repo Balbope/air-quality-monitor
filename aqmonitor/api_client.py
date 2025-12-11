@@ -36,3 +36,31 @@ class AirQualityClient:
         except requests.RequestException as e:
             logger.error("API-мен байланыс кезінде қате орын алды!", exc_info=True)
             raise AirQualityApiError("Ауа сапасы API-ін шақыруда қате!") from e
+
+from .exceptions import ApiError
+from .logging_config import logger
+
+def get_by_coords(self, lat=None, lon=None) -> AirQualityResult:
+    try:
+        response = requests.get(
+            API_URL,
+            params={"lat": lat or DEFAULT_LAT, "lon": lon or DEFAULT_LON, "appid": self.api_key},
+            timeout=5
+        )
+        response.raise_for_status()
+        data = response.json()
+
+        logger.info("API жауап сәтті алынды")
+        return parse_air_quality(data)
+
+    except requests.exceptions.Timeout:
+        logger.error("API сұрауы уақыт бойынша өтіп кетті")
+        raise ApiError("Уақыт бойынша қате: API жауап бермеді")
+
+    except requests.exceptions.HTTPError as e:
+        logger.error(f"HTTP қате: {e}")
+        raise ApiError(f"HTTP қатесі: {e}")
+
+    except Exception as e:
+        logger.error(f"Белгісіз қате пайда болды: {e}")
+        raise ApiError(f"Қате: {str(e)}")
